@@ -52,7 +52,7 @@ nav:hover {
 
 main {
     display: grid;
-    grid-template-columns: 2, 1fr;
+    grid-template-columns: 2fr, 1fr;
     gap: 2rem;
     max-width: 1000px;
     margin: 0 auto;
@@ -75,7 +75,7 @@ main h1 {
 
 @media (min-width: 768px) {
     main {
-        grid-template-columns: repeat(2fr, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
