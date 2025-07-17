@@ -84,7 +84,8 @@ h1 {
 }
 
 figure {
-    border: 1px solid #ccc;
+    border: 9px solid #ccc;
+    border-radius: 8px;
     padding: 0.5rem;
     text-align: center;
     background-color: #f9f9f9;
