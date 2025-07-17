@@ -6,7 +6,7 @@
 
 body {
     font-family: arial, sans-serif;
-    line-height: 1.5;
+    line-height: 1.5px;
     background-color: #fff;
     color: #333;
 }
@@ -24,7 +24,7 @@ header h1 {
     font-size: 2rem;
     color: #fff;
     text-align: center;
-    margin: 5;
+    margin: 8px;
 }
 
 .menu-icon {
