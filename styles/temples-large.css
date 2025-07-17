@@ -24,7 +24,7 @@ header h1 {
     font-size: 2rem;
     color: #fff;
     text-align: center;
-    margin: 5;
+    margin: 5px;
 }
 
 @media (min-width: 768px) {
