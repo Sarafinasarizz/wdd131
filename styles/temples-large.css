@@ -100,7 +100,7 @@ header h1 {
         padding: 1rem;
         background-color: #002e82;
         font-size: 0.9rem;
-        color: #fff;
+        text-decoration-color: #fff;
         margin-top: 2rem;
         border-top: 1px solid #ccc;
     }
