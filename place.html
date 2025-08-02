@@ -7,7 +7,10 @@
     <meta name="description" content="WDD 131 - Dynamic Web Development - Sarah Bilauni - Place page.">
     <meta name="author" content="Sarah Bilauni">
     <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css"
     <script src="scripts/place.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <header>
@@ -15,39 +18,69 @@
     </header>
 
     <main>
-        <section class="hero">
-            <img src="images/hero.webp" alt="Lionesses">
-        </section>
+        <section class="mobile-view">
+            <img src="images/hero.webp" alt="Two lionesses resting in the grass, Kenya savanna" class="main-image"> 
+        
 
-        <section class="data">
-            <h2>Data</h2>
-            <ul>
-                <li>Area: 580,367sq km</li>
-                <li>Population: 55,100,586 (2024 estimate)</li>
-                <li>Capital: Nairobi</li>
-                <li>Languages: English, Swahili (official) and over 40 ethnic languages</li>
-                <li>Currency: Kenyan Shillings (KES)</li>
-                <li>Time Zone: UTC +3</li>
-                <li>Calling Code: +254</li>
-                <li>Internet TLD:  .ke</li>
-            </ul>
-        </section>
+            <section class="data">
+                <h2>Data</h2>
+                <ul>
+                    <li>Area: 580,367sq km</li>
+                    <li>Population: 55,100,586 (2024 estimate)</li>
+                    <li>Capital: Nairobi</li>
+                    <li>Languages: English, Swahili (official) and over 40 ethnic languages</li>
+                    <li>Currency: Kenyan Shillings (KES)</li>
+                    <li>Time Zone: UTC +3</li>
+                    <li>Calling Code: +254</li>
+                    <li>Internet TLD:  .ke</li>
+                </ul>
+            </section>
 
-        <section class="weather">
-            <h2>Weather</h2>
-            <img src="images/weather-icon.svg" alt="weather symbol">
-            <ul>
-                <li>Temperature: 24 ℃</li>
-                <li>Conditions: Sunny</li>
-                <li>Wind: 10 km/h</li>
-                <li>Wind Chill: 60%</li>
-            </ul>
-        </section>
+            <section class="weather">
+                <h2>Weather</h2>
+                <img src="images/weather-icon.svg" alt="weather symbol">
+                <ul>
+                    <li>Temperature: 10℃</li>
+                    <li>Conditions: Sunny</li>
+                    <li>Wind:<span id="windSpeedKmh"></span></li>
+                    <li>Wind Chill: <span id="windChillDesktop"></span> ℃</li>
+                </ul>
+            </section>
+ 
+        </section> 
+
+         <section class="desktop-view">
+      <img src="images/hero.webp" alt="Kenyan Savannah" class="bg-image" />
+
+      <div class="overlay-box data-box glass">
+        <h2>Data</h2>
+        <p><strong>Area:</strong> 580,367 sq km</p>
+        <p><strong>Population:</strong> 55,100,586 (2024 est.)</p>
+        <p><strong>Capital:</strong> Nairobi</p>
+        <p><strong>Languages:</strong> English, Swahili, 40+ ethnic</p>
+        <p><strong>Currency:</strong> Kenyan Shillings</p>
+        <p><strong>Time Zone:</strong> UTC+3</p>
+        <p><strong>Calling Code:</strong> +254</p>
+        <p><strong>Internet TLD:</strong> .ke</p>
+      </div>
+
+      <div class="overlay-box weather-box glass">
+        <h2>Weather <img src="images/weather-icon.svg" alt="Sunny icon" /></h2>
+        <p><strong>Temperature:</strong> 10℃</p>
+        <p><strong>Conditions:</strong> Sunny</p>
+        <p><strong>Wind:</strong> <span id="windSpeedDesktop">--</span></p>
+        <p><strong>Wind Chill:</strong> <span id="windChillDesktop">--</span> ℃</p>
+      </div>
+    </section>
     </main>
+
+    <script src="place.js"></script>
 
     <footer>
         <p>©<span id="currentyear"></span>✨Sarah Bilauni✨Kenya</p>
         <p id="lastmodified"></p>
     </footer>
 </body>
+
+
 </html>

@@ -1,61 +1,115 @@
-body {
-  font-family: 'Segoe UI', sans-serif;
+:root {
+  --kenya-black: #000000;
+  --kenya-red: #bb0a1e;
+  --kenya-green: #006600;
+  --kenya-white: #ffffff;
+  --glass-bg: rgba(255, 255, 255, 0.75);
+  --glass-blur: blur(6px);
+}
+
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--kenya-white);
+  color: var(--kenya-black);
   line-height: 1.6;
-  background-color: #fff;
-  color: #111;
-  text-align: center;
 }
 
 header {
-  background-color: #d21f3c;
-  color: white;
-  padding: 1rem 0;
-  font-size: 2rem;
-  font-weight: bold;
+  background-color: var(--kenya-red);
+  color: var(--kenya-white);
+  padding: 1rem;
+  text-align: center;
 }
 
-.hero img {
+header h1 {
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+}
+
+.main-image {
   width: 100%;
   height: auto;
+  display: block;
 }
 
-.data {
-    background-color: green;
-    border: 1rem;
-    
-}
-
-section {
+.data,
+.weather {
   padding: 1.5rem;
+  background-color: var(--glass-bg);
+  margin: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  backdrop-filter: var(--glass-blur);
 }
 
-h2 {
+.data h2,
+.weather h2 {
+  background-color: var(--kenya-green);
+  color: var(--kenya-white);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
   margin-bottom: 1rem;
-  color: #222;
+  font-size: 1.3rem;
 }
 
-ul {
+.data ul,
+.weather ul {
   list-style: none;
-  padding: 0;
-  text-align: left;
-  max-width: 400px;
-  margin: auto;
 }
 
-li {
-  margin: 0.5rem 0;
+.data li,
+.weather li {
+  padding: 0.4rem 0;
+  font-size: 1rem;
 }
 
 .weather img {
-  width: 60px;
-  margin-bottom: 1rem;
+  width: 48px;
+  margin-bottom: 0.5rem;
 }
 
 footer {
-  background-color: #d21f3c;
-  color: white;
+  background-color: var(--kenya-black);
+  color: var(--kenya-white);
+  text-align: center;
   padding: 1rem;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
+  margin-top: 2rem;
+}
+
+/* Responsive styles for larger screens */
+@media (min-width: 768px) {
+  main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 2rem;
+  }
+
+  .mobile-view {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .main-image {
+    max-width: 40%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .data,
+  .weather {
+    width: 28%;
+  }
 }
