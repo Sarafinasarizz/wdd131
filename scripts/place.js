@@ -10,12 +10,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const windChill = calculateWindChill(temp, windSpeed);
   document.getElementById("windChill").textContent = windChill;
   document.getElementById("windChillDesktop").textContent = windChill;
+});
 
   // Footer year and modified date
   document.getElementById("currentyear").textContent = new Date().getFullYear();
-  
-  document.getElementById("lastmodified").textContent ="Last modification: " + document.lastModified;
-});
+
+
+  document.getElementById("lastmodified").textContent = "Last modified: " + document.lastModified;
 
 // Celsius wind chill formula
 function calculateWindChill(temp, windSpeed) {
