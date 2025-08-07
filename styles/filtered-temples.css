@@ -83,7 +83,7 @@ h1 {
 
 }
 
-figure {
+.res-grid {
     border: 9px solid #ccc;
     border-radius: 8px;
     padding: 0.5rem;
@@ -91,14 +91,14 @@ figure {
     background-color: #f9f9f9;
 }
 
-figure img {
+.res-grid img {
     width: 100%;
     height: auto;
     border-radius: 8px;
     display: block;
 }
 
-figcaption {
+.res-grid figcaption {
     margin-top: 0.5rem;
     color: #002e82;
     font-weight: bold;
