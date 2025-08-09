@@ -88,24 +88,26 @@ const temples = [
   },
 ];
 
-createTempleCard();
+function createTempleCard(filteredTemples) {
+  const grid = document.querySelector(".res-grid");
+  grid.innerHTML = "";
 
-function createTempleCard() {
-  temples.forEach(temple => {
-    let card = document.createElement("section");
-    let name = document.createElement("h3");
-    let location = document.createElement("p");
-    let dedication = document.createElement("p");
-    let area = document.createElement("p");
-    let img = document.createElement("img")
+
+  filteredTemples.forEach(temple => {
+    const card = document.createElement("section");
+    const name = document.createElement("h3");
+    const location = document.createElement("p");
+    const dedication = document.createElement("p");
+    const area = document.createElement("p");
+    const img = document.createElement("img");
 
     name.textContent = temple.templeName;
     location.innerHTML  =`<span class="label">Location:</span> ${temple.location}`;
     dedication.innerHTML = `<span class="label">Dedicated:</span> ${temple.dedicated}`;
     area.innerHTML = `<span class="label">Size:</span> ${temple.area} sq ft`;
-    img.setAttribute("src", temple.imageUrl);
-    img.setAttribute("alt", `${temple.templeName} Temple`);
-    img.setAttribute("loading", "lazy");
+    img.src = temple.imageUrl;
+    img.alt =`${temple.templeName} Temple`;
+    img.loading = "lazy";
 
     card.appendChild(name);
     card.appendChild(location);
@@ -113,8 +115,31 @@ function createTempleCard() {
     card.appendChild(area);
     card.appendChild(img);
 
-    document.querySelector(".res-grid").appendChild(card);
+    grid.appendChild(card);
 });
 }
 
+document.getElementById("home").addEventListener("click", () => {
+  createTempleCard(temples);
+});
+document.getElementById("old").addEventListener("click", () => {
+  const oldTemples = temples.filter(t => parseInt(t.dedicated.split(",")[0]) < 1900);
+  createTempleCard(oldTemples);
+});
+document.getElementById("new").addEventListener("click", () => {
+  const newTemples = temples.filter(t => parseInt(t.dedicated.split(",")[0]) > 2000);
+  createTempleCard(newTemples);
+});
 
+document.getElementById("large").addEventListener("click", () => {
+  const largeTemples = temples.filter(t => t.area > 90000);
+  createTempleCard(largeTemples);
+});
+
+document.getElementById("small").addEventListener("click", () => {
+  const smallTemples = temples.filter(t => t.area < 10000);
+  createTempleCard(smallTemples);
+});
+
+// Load all by default
+createTempleCard(temples);

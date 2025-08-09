@@ -36,16 +36,21 @@ header h1 {
     
 }
 
-nav ul {
+nav {
     list-style: none;
     display: flex;
     gap: 1rem;
+    padding: 1rem;
+    justify-content: center;
 }
 
-nav a {
-    color: white;
+button {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    background-color: white;
     text-decoration: none;
     font-weight: bold;
+    border-radius: 5px;
 }
 
 nav a:hover {
